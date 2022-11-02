@@ -1,3 +1,5 @@
+library nuts;
+
 import 'package:flutter/material.dart';
 
 class FlatButton extends StatefulWidget {
@@ -5,7 +7,7 @@ class FlatButton extends StatefulWidget {
   final Color color;// 
   final void Function()? onPressed;
 
-  FlatButton({
+  const FlatButton({
     super.key,
     required this.child,
     this.color = Colors.transparent,
@@ -20,10 +22,10 @@ class _FlatButtonState extends State<FlatButton> {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      child: widget.child,
       onPressed: widget.onPressed,
       style:
           ButtonStyle(backgroundColor: MaterialStateProperty.all(widget.color)),
+      child: widget.child,
       //print();
     );
   }
