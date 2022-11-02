@@ -15,7 +15,7 @@ pubspec.yaml file add
 dependencies:
 
 
-  nuts: ^0.0.1
+  nuts:  
     git:
       url: https://github.com/coodtec/nuts.git
       ref: main # branch name
