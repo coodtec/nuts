@@ -11,6 +11,7 @@ start using the package.
 ## Usage
 pubspec.yaml file add 
 
+```
 dependencies:
 
 
@@ -18,6 +19,8 @@ dependencies:
     git:
       url: https://github.com/coodtec/nuts.git
       ref: main # branch name
+
+```
 
 ## Additional information
 
