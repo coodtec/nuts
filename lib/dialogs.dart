@@ -4,9 +4,16 @@ class PopAlert {
   BuildContext context;
   String title;
   String message;
+  String actText;
+  void Function()? onPressed; 
 
   PopAlert(
-      {required this.context, required this.message, this.title = 'Alert'}) {
+      {required this.context, 
+      required this.message, 
+      this.title = 'Alert',
+      this.actText = 'OK',
+      this.onPressed,
+      }) {
     showDialog<String>(
       context: context,
       builder: (BuildContext context) => AlertDialog(
@@ -18,11 +25,24 @@ class PopAlert {
             child: const Text('Cancel'),
           ), */
           TextButton(
-            onPressed: () => Navigator.pop(context, 'OK'),
-            child: const Text('OK'),
+            onPressed:  extendOnPressed(onPressed,context,actText),
+            child: Text(actText),
           ),
         ],
       ),
     );
+  }
+}
+
+
+Function()? extendOnPressed (Function()? onPressed, BuildContext context, String text){
+  if (onPressed == null) {
+    return () => Navigator.pop(context, 'OK');
+  }
+  else {
+    return (() {
+      onPressed;
+      Navigator.pop(context, text);
+    });
   }
 }
