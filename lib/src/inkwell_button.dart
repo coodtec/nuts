@@ -1,4 +1,4 @@
-part of 'nuts.dart';
+part of nuts;
 
 class InkwellButton extends StatelessWidget {
   final IconData fasIcon;

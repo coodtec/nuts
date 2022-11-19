@@ -1,4 +1,4 @@
-part of 'nuts.dart';
+part of nuts;
 
 class FlatButton extends StatefulWidget {
   final Widget child;

@@ -2,9 +2,9 @@ library nuts;
 
 import 'package:flutter/material.dart';
 
-part 'dialogs.dart';
-part 'expanded_box.dart';
-part 'hide_layer.dart';
-part 'inkwell_button.dart';
-part 'replaced_buttons.dart';
-part 'screen.dart';
+part 'src/dialogs.dart';
+part 'src/expanded_box.dart';
+part 'src/hide_layer.dart';
+part 'src/inkwell_button.dart';
+part 'src/replaced_buttons.dart';
+part 'src/screen.dart';

@@ -1,4 +1,4 @@
-part of 'nuts.dart';
+part of nuts;
 
 class Block extends StatefulWidget {
   final Color color;

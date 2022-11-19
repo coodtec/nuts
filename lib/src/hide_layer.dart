@@ -1,4 +1,4 @@
-part of 'nuts.dart';
+part of nuts;
 
 class HideCover extends StatefulWidget {
   final bool visible;
