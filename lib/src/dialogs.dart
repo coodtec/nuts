@@ -1,20 +1,15 @@
 part of nuts;
 
-class PopAlert {
+class PopAlert  {
   BuildContext context;
   String title;
   String message;
-  String actText;
-  void Function()? onPressed;
-  bool cancelButton;
+
 
   PopAlert({
     required this.context,
     required this.message,
     this.title = 'Alert',
-    this.actText = 'OK',
-    this.onPressed,
-    this.cancelButton = false,
   }) {
     showDialog<String>(
       context: context,
@@ -22,19 +17,19 @@ class PopAlert {
         title: Text(title),
         content: Text(message),
         actions: <Widget>[
-          CancelButton(cancel: true,context: context,),
+          //CancelButton(cancel: true,context: context,),
           TextButton(
-            onPressed: layedOnPressed(onPressed, context, actText),
-            child: Text(actText),
+            onPressed: () => Navigator.pop(context, 'OK'),
+            child: const Text('OK'),
           ),
         ],
       ),
-    );
+    ).then((value) =>  value);
   }
 }
 
 
-class CancelButton extends StatelessWidget {
+/* class CancelButton extends StatelessWidget {
   const CancelButton({
     Key? key,
     required this.cancel,
@@ -55,9 +50,9 @@ class CancelButton extends StatelessWidget {
       return const SizedBox();
     }
   }
-}
+} */
 
-Function()? layedOnPressed(
+/* Function()? layedOnPressed(
     Function()? onPressed, BuildContext context, String text) {
   if (onPressed == null) {
     return () => Navigator.pop(context, 'OK');
@@ -68,3 +63,4 @@ Function()? layedOnPressed(
     });
   }
 }
+ */
