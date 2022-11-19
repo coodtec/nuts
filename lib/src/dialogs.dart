@@ -1,10 +1,9 @@
 part of nuts;
 
-class PopAlert  {
+class PopAlert {
   BuildContext context;
   String title;
   String message;
-
 
   PopAlert({
     required this.context,
@@ -24,7 +23,7 @@ class PopAlert  {
           ),
         ],
       ),
-    ).then((value) =>  value);
+    ).then((value) => value);
   }
 }
 
