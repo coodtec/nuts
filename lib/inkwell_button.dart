@@ -1,5 +1,4 @@
-
-import 'package:flutter/material.dart';
+part of 'nuts.dart';
 
 class InkwellButton extends StatelessWidget {
   final IconData fasIcon;

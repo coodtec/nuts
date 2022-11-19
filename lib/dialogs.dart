@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'nuts.dart';
 
 class PopAlert {
   BuildContext context;

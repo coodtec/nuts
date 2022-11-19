@@ -1,10 +1,8 @@
-library nuts;
-
-import 'package:flutter/material.dart';
+part of 'nuts.dart';
 
 class FlatButton extends StatefulWidget {
   final Widget child;
-  final Color color;// 
+  final Color color; //
   final void Function()? onPressed;
 
   const FlatButton({
@@ -31,10 +29,9 @@ class _FlatButtonState extends State<FlatButton> {
   }
 }
 
-
 class RaisedButton extends ElevatedButton {
-  const RaisedButton({
-    super.key,
-    required super.child, 
-    required super.onPressed}) : super();
+  const RaisedButton(
+      {super.key, required super.child, required super.onPressed})
+      : super();
 }
+

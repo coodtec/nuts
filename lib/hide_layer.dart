@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'nuts.dart';
 
 class HideCover extends StatefulWidget {
   final bool visible;

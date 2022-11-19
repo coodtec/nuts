@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-
+part of 'nuts.dart';
 
 class Block extends StatefulWidget {
   final Color color;
