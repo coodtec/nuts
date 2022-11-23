@@ -7,9 +7,9 @@ class FlatButton extends StatefulWidget {
 
   const FlatButton({
     super.key,
-    required this.child,
-    this.color = Colors.transparent,
     required this.onPressed,
+    required this.child,
+    this.color = Colors.transparent,    
   });
 
   @override
