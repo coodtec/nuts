@@ -1,6 +1,6 @@
 part of nuts;
 
-Future<String> showAlertDialog(
+Future<String> popAlert(
     { required BuildContext context,
       required String message,
       String title = 'Alert',
