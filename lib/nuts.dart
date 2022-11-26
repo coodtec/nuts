@@ -9,3 +9,4 @@ part 'src/inkwell_button.dart';
 part 'src/replaced_buttons.dart';
 part 'src/screen.dart';
 part 'src/nullSafety.dart';
+part 'src/loading_page.dart';
