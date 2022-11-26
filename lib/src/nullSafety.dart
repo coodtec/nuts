@@ -2,10 +2,9 @@
 
 part of nuts;
 
-String StringN(String? s) {
-  return (s == null)? '':s;
-}
+String StringN(String? s) => s?? '';
+  //(s == null) ? '' : s;
 
-int intN(int? i) {
-  return (i == null)? 0:i;
-}
+
+int intN(int? i) => i?? 0;
+
