@@ -1,8 +1,10 @@
 part of nuts;
 
-//errors for 'objectbox.g.dart' , 'Store define' and 'openStore' will be solved in customer application project
 
+/*
+errors for 'objectbox.g.dart' , 'Store define' and 'openStore' will be solved in customer application project
 import 'objectbox.g.dart'; //runner generated objectBox CODES
+*/
 
 class StoreObjectBox {
   static late Store _store;
