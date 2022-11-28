@@ -10,3 +10,4 @@ part 'src/replaced_buttons.dart';
 part 'src/screen.dart';
 part 'src/nullSafety.dart';
 part 'src/loading_page.dart';
+part 'src/objectbox_store.dart';
