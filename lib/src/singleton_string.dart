@@ -18,8 +18,8 @@ class StringSingleton {
     // initialization singleton
   }
 
-  static set(String initString) {
-    _str = initString.isNotEmpty? _str:initString;
+  static init(String initString) {
+    _str = _str.isEmpty? initString:_str;
   }
 
   static String get() => _str;
