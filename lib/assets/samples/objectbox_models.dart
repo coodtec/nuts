@@ -1,4 +1,6 @@
 // ignore: unnecessary_import
+import 'package:flutter/material.dart';
+// ignore: unnecessary_import
 import 'package:objectbox/objectbox.dart';
 import 'objectbox.g.dart';
 
@@ -153,5 +155,21 @@ class Boxes {
     final builder = task.query()..order(Task_.id, flags: Order.descending);
     builder.link(Task_.event, Event_.id.equals(theEvent.id));
     return builder.build().find();
+  }
+}
+
+//  Initial objectBox at Begin
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Boxes().init();
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
