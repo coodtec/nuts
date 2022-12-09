@@ -96,7 +96,7 @@ class Boxes {
       owner = Box<Owner>(_store);
       event = Box<Event>(_store);
       initialized = true;
-      if (task.query(Task_.text.equals(nullString)).build().find().isEmpty) {
+      if (task.query(Task_.name.equals(nullString)).build().find().isEmpty) {
         task.put(Task(nullString));
       }
       if (owner.query(Owner_.name.equals(nullString)).build().find().isEmpty) {
