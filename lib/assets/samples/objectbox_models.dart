@@ -158,7 +158,7 @@ class Boxes {
   }
 }
 
-//  Initial objectBox at Begin
+//  Initial objectBox at Begin.
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Boxes().init();
