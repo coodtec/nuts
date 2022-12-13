@@ -98,11 +98,7 @@ class SubtitleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<Model>(
-      builder: ((context, model, child) {
-        return Text('${model.length}  tasks',
-            style: const TextStyle(fontSize: 25));
-      }),
-    );
+    return Text('${Provider.of<Model>(context).length}  tasks',
+        style: const TextStyle(fontSize: 25));
   }
 }
