@@ -53,7 +53,7 @@ class TaskView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<Model>(
       builder: ((context, model, child) {
-        List<Task> tasks = (Provider.of<Model>(context)).getAll;
+        List<Task> tasks = (Provider.of<Model>(context)).tasks;
         return ListView.builder(
             itemCount: tasks.length,
             itemBuilder: ((context, i) {
@@ -63,7 +63,8 @@ class TaskView extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8.0)),
                 leading: IconButton(
                     onPressed: (() {
-                      model.remove = i;
+                      model.tasks.remove(t);
+                      model.setState;
                     }),
                     icon: const Icon(Icons.delete_outline)),
                 title: Text(
@@ -81,9 +82,8 @@ class TaskView extends StatelessWidget {
                       checkColor: Colors.black,
                       value: t.checked,
                       onChanged: ((value) {
-                        t.checked = value ?? false; //change directly without notify
+                        t.checked = value ?? false;
                         model.setState;
-                        //model.updateAt(i, t);
                       })),
                 ),
               );
@@ -95,10 +95,9 @@ class TaskView extends StatelessWidget {
 
 class SubtitleText extends StatelessWidget {
   const SubtitleText({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return Text('${Provider.of<Model>(context).length}  tasks',
+    return Text('${Provider.of<Model>(context).tasks.length}  tasks',
         style: const TextStyle(fontSize: 25));
   }
 }
