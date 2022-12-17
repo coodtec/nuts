@@ -11,3 +11,4 @@ part 'src/screen.dart';
 part 'src/nullSafety.dart';
 part 'src/loading_page.dart';
 part 'src/singleton_string.dart';
+part 'src/zh_char_converter.dart';
