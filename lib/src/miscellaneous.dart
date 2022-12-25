@@ -11,3 +11,15 @@ void dPrint(String text) {
   if (kDebugMode)  print(text);
 }
 
+class DebugPrint {
+  bool _show = false;
+
+  DebugPrint();
+
+  set on(bool status) => _show = status;
+  
+  set print(String str){
+    if (_show) dPrint(str);
+  }
+
+}
