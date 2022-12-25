@@ -15,7 +15,8 @@ class DebugPrint {
   bool _show = false;
 
   DebugPrint();
-
+  
+  get status => _show;
   set on(bool status) => _show = status;
   
   set print(String str){
