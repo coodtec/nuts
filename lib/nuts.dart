@@ -2,6 +2,8 @@ library nuts;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:html/dom.dart' as html;
+
 
 part 'src/dialogs.dart';
 part 'src/expanded_box.dart';
