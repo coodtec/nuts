@@ -32,7 +32,7 @@ cleanDiv(html.Element targetElement){
         if (grandchild.parent != null) {
           child.append(grandchild);
         }
-        if (child.children.isEmpty) {child.remove();}
+        if (child.children.isEmpty) {if(child.localName == 'div') child.remove();}
         else if (child.children.length == 1) {
           if (child.localName == 'div') {child.replaceWith(child.children.first);}
         }
