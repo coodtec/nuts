@@ -20,22 +20,18 @@ cleanDiv(html.Element targetElement){
   for (html.Element div in divTags) {
     if (div.children.isEmpty){
       div.remove();
-    }else
-     {
+      continue;
+    }    
+    List<html.Element> children = div.children;
+    if (children.length == 1) {
+      div.replaceWith(children.first);
+    } else {
       html.Element clear = html.Element.tag('div');
-      List<html.Element> children = div.children;
-      if (children.length == 1) {
-        clear =children.first;
-      } else {
-        for (var element in children) { 
-          clear.append(element);
-        }
+      for (var element in children) { 
+        clear.append(element);
       }
       div.replaceWith(clear);
     }
-
-    if(div.children.length == 1) {
-      div.replaceWith(div.children.first);
-    } 
   }  
 }
+
