@@ -27,11 +27,9 @@ cleanDiv(html.Element targetElement){
       div.replaceWith(children.first);
     } else {
       div.innerHtml = '';
-      html.Element clear = html.Element.html(div.outerHtml);
-      for (var element in children) { 
-        clear.append(element);
+      for (var child in children) { 
+        div.append(child);
       }
-      div.replaceWith(clear);
     }
   }  
 }
