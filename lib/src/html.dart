@@ -16,20 +16,27 @@ List<String> urls(String text) {
 
 //clean div Tags
 cleanDiv(html.Element targetElement){
-  List<html.Element> divTags = targetElement.querySelectorAll('div');
-  for (html.Element div in divTags) {
-    if (div.children.isEmpty){
-      div.remove();
-      continue;
-    }    
-    List<html.Element> children = div.children;
-    if (children.length == 1) {
-      div.replaceWith(children.first);
-    } else {
-      div.innerHtml = '';
-      for (var child in children) { 
-        div.append(child);
+  for (html.Element child in targetElement.children) {
+    if (child.children.isEmpty) {
+      if (child.localName == 'div') child.remove();
+    } 
+    else if(child.children.length == 1 ) { 
+        child.replaceWith(child.children.first);
+        cleanDiv(child);
+    }
+    else {
+      List<html.Element> grandchildren = child.children;
+      child.innerHtml = '';
+      for (html.Element grandchild in grandchildren) {
+        cleanDiv(grandchild);
+        if (grandchild.parent != null) {
+          child.append(grandchild);
+        }
+        if (child.children.isEmpty) {child.remove();}
+        else if (child.children.length == 1) {
+          if (child.localName == 'div') {child.replaceWith(child.children.first);}
+        }
       }
     }
-  }  
+  } 
 }
