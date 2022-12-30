@@ -26,7 +26,8 @@ cleanDiv(html.Element targetElement){
     if (children.length == 1) {
       div.replaceWith(children.first);
     } else {
-      html.Element clear = html.Element.tag('div');
+      div.innerHtml = '';
+      html.Element clear = html.Element.html(div.outerHtml);
       for (var element in children) { 
         clear.append(element);
       }
@@ -34,4 +35,3 @@ cleanDiv(html.Element targetElement){
     }
   }  
 }
-
