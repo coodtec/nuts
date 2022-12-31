@@ -26,7 +26,7 @@ cleanDiv(html.Element targetElement){
     }
     else {
       List<html.Element> grandchildren = child.children;
-      child.innerHtml = '';
+      if(child.localName == 'div') child.innerHtml = '';
       for (html.Element grandchild in grandchildren) {
         cleanDiv(grandchild);
         if (grandchild.parent != null) {
